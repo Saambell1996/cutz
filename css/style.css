@@ -1,0 +1,83 @@
+* {
+}
+
+body {
+  overflow-y:hidden;
+}
+
+@font-face {
+  font-family: "AdamPro";
+  src: url("./fonts/ADAM.CG PRO.otf");
+}
+
+
+
+.navbar-brand img {
+  width: 50px;
+  height: 20px;
+  margin-bottom: 4px;
+  transition:0.2s;
+}
+
+.navbar-brand img:hover {
+transform:scale(1.2);
+transition:0.2s;
+}
+
+.collapse ul li a{
+  color:white;
+  font-family: "AdamPro";
+  margin-left:6px;
+}
+
+.landing {
+  background-image: url("./img/cutz1.png");
+  height: 100vh;
+  background-size: cover;
+}
+
+.landing-header {
+  position: absolute;
+  padding-top:20px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 650px;
+  height: 300px;
+  border-radius: 3px;
+  text-align: left;
+
+  
+
+}
+
+.title {
+  font-family: "AdamPro";
+  font-weight:bolder;
+  font-size:130px;
+  text-shadow: 3px 3px #cecece;
+  letter-spacing: 8px;
+}
+
+.subtitle {
+  font-family: "AdamPro";
+  font-weight:bolder;
+  font-size:50px;
+  letter-spacing: 10px;
+  text-shadow: 3px 3px #cecece;
+}
+
+.outer-subheader {
+  font-family: "AdamPro";
+  font-size:40px;
+  text-shadow: 3px 3px #cecece;
+  
+}
+
+.location {
+  font-family: "AdamPro";
+  font-size:16px;
+}
+
