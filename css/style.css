@@ -27,6 +27,7 @@ transition:0.2s;
 .collapse ul li a{
   color:white;
   font-family: "AdamPro";
+  /*   font-family: 'Raleway', sans-serif; */
   margin-left:6px;
 }
 
