@@ -2,83 +2,246 @@
 }
 
 body {
-  overflow-y:hidden;
 }
+
+/*COLOURS*/
+.elegant-color {
+  background-color: #343A40;
+  color:#cecece;
+  font-family:"Raleway";
+}
+
+/*FONTS*/
 
 @font-face {
   font-family: "AdamPro";
   src: url("./fonts/ADAM.CG PRO.otf");
 }
 
+/*INDEX*/
 
+
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-weight:500;
+  margin-top:7px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
 
 .navbar-brand img {
   width: 50px;
   height: 20px;
   margin-bottom: 4px;
-  transition:0.2s;
+  transition: 0.2s;
 }
 
 .navbar-brand img:hover {
-transform:scale(1.2);
-transition:0.2s;
+  transform: scale(1.2);
+  transition: 0.2s;
 }
 
-.collapse ul li a{
-  color:white;
-  font-family: "AdamPro";
+.collapse ul li a {
+  color: white;
   /*   font-family: 'Raleway', sans-serif; */
-  margin-left:6px;
+
 }
 
 .landing {
   background-image: url("./img/cutz1.png");
   height: 100vh;
-  background-size: cover;
 }
 
 .landing-header {
   position: absolute;
-  padding-top:20px;
+  padding-top: 20px;
+
   margin: auto;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   width: 650px;
-  height: 300px;
+  height: 360px;
   border-radius: 3px;
   text-align: left;
-
-  
-
 }
 
 .title {
   font-family: "AdamPro";
-  font-weight:bolder;
-  font-size:130px;
+  font-weight: bolder;
+  font-size: 130px;
   text-shadow: 3px 3px #cecece;
   letter-spacing: 8px;
+  width: 400px;
 }
 
 .subtitle {
   font-family: "AdamPro";
-  font-weight:bolder;
-  font-size:50px;
+  font-weight: bolder;
+  font-size: 50px;
   letter-spacing: 10px;
   text-shadow: 3px 3px #cecece;
+  width: 300px;
 }
 
 .outer-subheader {
   font-family: "AdamPro";
-  font-size:40px;
+  font-size: 40px;
   text-shadow: 3px 3px #cecece;
-  
+  width: 570px;
 }
 
 .location {
   font-family: "AdamPro";
-  font-size:16px;
+  font-size: 16px;
+  width: 340px;
 }
 
+/* ABOUT PAGE */
+.map-section {
+  margin-top: 60px;
+  text-align: right;
+}
+
+.about-section {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.about-title {
+  font-size: 36px;
+  font-family: "AdamPro";
+  text-shadow: 2px 2px #cecece;
+}
+
+.about-subtitle {
+  font-size: 15px;
+  font-family: "Raleway";
+  text-decoration: underline;
+  margin-top: 10px;
+  letter-spacing: 3px;
+}
+
+.about-info {
+  font-size: 16px;
+  font-family: "Raleway";
+  margin-top: 7px;
+
+ 
+}
+
+.about-info-times {
+  font-size: 16px;
+  font-family: "Raleway";
+  margin-top: 7px;
+  width:210px;
+  display: inline-block;
+  vertical-align: top;
+}
+.closed {color:red; font-size:20px; font-weight:500; font-family: "Raleway";}
+.hours  { color:green; display: none; font-size:20px; font-weight:500; font-family: "Raleway"; }
+
+.today {
+  font-weight:600;
+  
+}
+
+.opening-times {
+  list-style: none;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  width:210px;
+  display:inline-block;
+}
+
+
+
+/*Icons */
+.fa-question-circle {
+  margin-left: 6px;
+}
+
+.fa-clock {
+  margin-left: 6px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 660px) {
+  .landing-header {
+    margin: 0 auto;
+    padding-top: 170px;
+    width: auto;
+    height: auto;
+    position: unset;
+    text-align: center;
+  }
+  .title {
+    font-size: 80px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .outer-subheader {
+    font-size: 30px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .location {
+    font-size: 15px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 6px;
+  }
+
+ 
+
+ 
+}
+@media only screen and (max-width: 985px) {
+  .iframe-holder iframe {
+    width: 360px;
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 764px) {
+  .iframe-holder {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .iframe-holder iframe {
+    width: 330px;
+    height: 350px;
+  }
+
+  .about-section {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .iframe-holder {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .iframe-holder iframe {
+    width: 290px;
+    height: 300px;
+  }
+}
