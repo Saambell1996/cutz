@@ -63,7 +63,7 @@ html {
  
 }
 
-#demo {
+#timer-clock {
   color: rgba(255, 255, 255, 0.5);
   margin-right:30px;
 }
@@ -214,7 +214,6 @@ html {
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  border: 1px solid black;
   box-shadow: 2px 2px 2px grey;
   
 
@@ -250,16 +249,33 @@ html {
 }
 
 .gallery-image {
-  max-width:250px;
-  max-height:250px;
-  object-fit: cover;
+max-width:250px;
+max-height:250px;
+object-fit: cover;
 overflow: hidden;
 width: 350px;
 height:250px;
 margin-top:8px;
-padding:5px;
+margin:10px;
+box-shadow: 3px 3px 3px #cecece;
+transition: 0.3s;
 
 }
+
+.gallery-image:hover {
+  max-width:250px;
+  max-height:250px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 350px;
+  height:250px;
+  margin-top:8px;
+  margin:10px;
+  box-shadow: 3px 3px 3px #cecece;
+  transform:scale(1.05);
+  transition: 0.3s;
+  
+  }
 
 .gallery-container {
   margin: 0 auto;
