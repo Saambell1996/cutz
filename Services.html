@@ -38,7 +38,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="About.html">About</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="Contact.html">Contact</a>
                 </li>
             </ul>
@@ -67,14 +67,13 @@
             </div>
             <div class="row">
                 <div id="search-bar">
-                    <input type="text" id="myInput" value=""
-                        class="form-control form-control-lg form-control-border"
-                        placeholder="Filtering | Search Bar">
+                    <input type="text" id="myInput" value="" class="form-control form-control-lg form-control-border"
+                    onkeyup="filterCards()" placeholder="Filtering | Search Bar">
                     </input>
                 </div>
             </div>
 
-            <div class="row" id="MyCards">
+            <div class="row" id="myCards">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex align-items-stretch">
                     <div class="card">
                         <img class="card-img-top" src="/img/gallery/cutzpp.jpg" alt="Card image cap">
@@ -582,15 +581,40 @@
 <script src="jquery-3.3.1.min.js"></script>
 <script src="openTimes.js"></script>
 <script src="validator.js"></script>
-<script>
-        $(document).ready(function () {
-            $("#myInput").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#MyCards .card").filter(function () {
-                    $(this).toggle($(this).find('h5').text().toLowerCase().indexOf(value) > -1)
-                });
+<!--<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#MyCards .card").filter(function () {
+                $(this).toggle($(this).find('h5').text().toLowerCase().indexOf(value) > -1)
             });
         });
-    </script>
+    });
+</script>
+-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        filterCards();
+    });
+</script>
+<script type="text/javascript">
+    function filterCards() {
+        var input, filter, cards, cardContainer, h5, title, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        cardContainer = document.getElementById("myCards");
+        cards = cardContainer.getElementsByClassName("card");
+        for (i = 0; i < cards.length; i++) {
+            title = cards[i].querySelector(".card-body h5.card-title");
+            if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                cards[i].parentNode.style.display = "";
+            } else {
+                cards[i].parentNode.style.setProperty('display', 'none', 'important');
+                /*style.display = "none"; */
+            }
+        }
+    }
+ 
+</script>
 
 </html>
