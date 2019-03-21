@@ -352,6 +352,14 @@ overflow: hidden;
   
 }
 
+#search-bar {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 22px;
+  margin-bottom:22px;
+  width:600px;
+}
+
 .card-img-top {
   width:100%;
   height:180px;
