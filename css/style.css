@@ -2,6 +2,7 @@
 }
 
 body {
+ 
 }
 
 html {
@@ -243,6 +244,12 @@ html {
   text-align: left;
 }
 
+.list-unstyled
+{
+  color:red;
+  margin-top:6px;
+}
+
 
 /* GALLERY */
 
@@ -263,7 +270,7 @@ width: 350px;
 height:250px;
 margin-top:8px;
 margin:10px;
-box-shadow: 1px 1px 1px grey;
+box-shadow: 0px 3px 0px 0px grey;
 transition: 0.3s;
 padding:7px;
 background-color:white;
@@ -279,7 +286,7 @@ background-color:white;
   height:250px;
   margin-top:8px;
   margin:10px;
-  box-shadow: 3px 3px 3px #cecece;
+  box-shadow: 0px 3px 0px 0px grey;
   transform:scale(1.05);
   transition: 0.3s;
   
@@ -320,7 +327,8 @@ overflow: hidden;
     min-height:360px;
     margin-top: 20px;
     transition: 0.3s;
-    box-shadow: 4px 3px 4px grey;
+    box-shadow: 0px 3px 0px 0px grey;
+
    
   }
 
