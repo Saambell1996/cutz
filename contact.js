@@ -6,6 +6,15 @@ $(function () {
 
     $('#contact-form').validator();
 
+    $("contact-form").submit(function(event) {
+
+        var recaptcha = $("#g-recaptcha").val();
+        if (recaptcha === "") {
+           event.preventDefault();
+           alert("Please check the recaptcha");
+        }
+     });
+
 
     // when the form is submitted
     $('#contact-form').on('submit', function (e) {
